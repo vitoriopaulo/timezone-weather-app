@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timezone Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container" id="weatherContainer">
+    <h1>Timezone Weather App</h1>
+    <div class="weather-cards"></div>
+    <button class="add-location-button">Add Location</button>
+  </div>
+
+  <!-- Modal Structure -->
+  <div class="modal" id="locationModal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Add Location</h2>
+      <input type="text" id="locationInput" placeholder="e.g. Rio de Janeiro">
+      <div class="modal-buttons">
+        <button class="ok-button">Ok</button>
+        <button class="cancel-button">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Warning Message -->
+  <div class="warning-message" id="warningMessage">
+    <p>Location not found. Please try a different city or region!</p>
+  </div>
+
+  <div class="limit-warning-message" id="limitWarningMessage">
+    <p>Limit of locations, 7 reached. A new location can't be added.</p>
+  </div>
+
+  <div class="delete-warning-message" id="deleteWarningMessage">
+    <p>Can't delete it, There's only one forecast location in the list!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
