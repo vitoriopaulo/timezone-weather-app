@@ -3,6 +3,7 @@ body {
     background-color: #1a1a1a; /* Dark grey */
     margin: 0;
     padding: 20px;
+    font-size: 1rem; /* Base font size */
   }
   
   .app-container {
@@ -129,12 +130,12 @@ body {
     width: 40px; /* Width for circular shape */
     height: 40px; /* Height for circular shape */
     text-align: center; /* Center the text */
+    cursor: pointer;
   }
   
   .close-button:hover,
   .close-button:focus {
     color: white;
-    cursor: pointer;
   }
   
   .modal-title {
@@ -171,6 +172,11 @@ body {
     border-bottom: 2px solid cyan; /* Bottom line style */
     background-color: #333; /* Match modal background */
     color: white; /* White text color */
+    font-size: 1rem; /* Relative font size */
+  }
+  
+  input[type="text"]:focus {
+    outline: 2px solid cyan; /* Focus indicator */
   }
   
   .warning-message, .limit-warning-message {
@@ -188,12 +194,43 @@ body {
     font-size: 16px;
   }
   
+  #error-message {
+    display: none;
+    color: red;
+    margin-top: 10px;
+  }
+  
   .footer {
     text-align: center;
     color: #f0f0f0; /* Off-white color for footer text */
     margin-top: 20px;
     background-color: black; /* Black background for footer */
     padding: 10px 0; /* Padding for footer */
+  }
+  
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: cyan;
+    color: black;
+    padding: 8px;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
   }
   
   /* Media Queries for Responsiveness */
