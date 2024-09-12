@@ -1,5 +1,5 @@
-const maxLocations = 7; // Maximum number of locations allowed
-let currentLocationCount = 0; // Counter for added locations
+const maxLocations = 7;
+let currentLocationCount = 0;
 
 // Get the user's location
 navigator.geolocation.getCurrentPosition(
@@ -15,7 +15,7 @@ navigator.geolocation.getCurrentPosition(
 
 // Fetch weather data from OpenWeatherMap API
 function fetchWeatherData(latitude, longitude) {
-  const apiKey = '6084b872d00a3f72dbec3969489236a2'; // Replace with your actual API key
+  const apiKey = '6084b872d00a3f72dbec3969489236a2';
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
   fetch(apiUrl)
@@ -33,13 +33,13 @@ function fetchWeatherData(latitude, longitude) {
 
       const weatherInfo = `
         <div class="weather-card">
+          <button class="delete-button">X</button>
           <h2 class="city-name">${name}</h2>
           <img class="weather-icon" src="http://openweathermap.org/img/w/${icon}.png" alt="${description}">
           <p class="weather-description">${description}</p>
           <p class="temperature">Temperature: <span class="temp-value">${temp}</span>°C</p>
           <p class="humidity">Humidity: <span class="humidity-value">${humidity}</span>%</p>
           <p class="wind-speed">Wind Speed: <span class="wind-speed-value">${speed}</span> m/s</p>
-          <button class="delete-button">Delete</button>
         </div>
       `;
 
@@ -54,7 +54,7 @@ function fetchWeatherData(latitude, longitude) {
 // Display weather information
 function displayWeatherInfo(info) {
   const weatherCardsContainer = document.querySelector('.weather-cards');
-  weatherCardsContainer.innerHTML += info; // Add new weather info
+  weatherCardsContainer.innerHTML += info;
 
   // Add event listener to delete buttons
   const deleteButtons = document.querySelectorAll('.delete-button');
@@ -62,7 +62,7 @@ function displayWeatherInfo(info) {
     button.addEventListener('click', deleteWeatherCard);
   });
 
-  currentLocationCount++; // Increment the count of locations
+  currentLocationCount++;
 }
 
 // Delete weather card
@@ -74,7 +74,7 @@ function deleteWeatherCard(event) {
     showDeleteWarningMessage();
   } else {
     card.remove();
-    currentLocationCount--; // Decrement the count of locations
+    currentLocationCount--;
   }
 }
 
@@ -149,7 +149,7 @@ window.onclick = function(event) {
 
 // Fetch weather data by location
 function fetchWeatherDataByLocation(location) {
-  const apiKey = '6084b872d00a3f72dbec3969489236a2'; // Replace with your actual API key
+  const apiKey = '6084b872d00a3f72dbec3969489236a2';
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
 
   fetch(apiUrl)
@@ -167,13 +167,13 @@ function fetchWeatherDataByLocation(location) {
 
       const weatherInfo = `
         <div class="weather-card">
+          <button class="delete-button">X</button>
           <h2 class="city-name">${name}</h2>
           <img class="weather-icon" src="http://openweathermap.org/img/w/${icon}.png" alt="${description}">
           <p class="weather-description">${description}</p>
           <p class="temperature">Temperature: <span class="temp-value">${temp}</span>°C</p>
           <p class="humidity">Humidity: <span class="humidity-value">${humidity}</span>%</p>
           <p class="wind-speed">Wind Speed: <span class="wind-speed-value">${speed}</span> m/s</p>
-          <button class="delete-button">Delete</button>
         </div>
       `;
 
