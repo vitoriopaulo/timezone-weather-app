@@ -1,0 +1,28 @@
+# Timezone Weather App
+
+## Description
+
+The **Timezone Weather** app is designed to help users view the weather forecast for up to 7 different zones. It is particularly useful for digital nomads and travelers alike. The app features a minimalist, user-friendly interface that is easy to navigate.
+
+Built with a tech stack of **HTML**, **CSS**, and **JavaScript**, this front-end application stores data locally, making it a privacy-conscious choice for users. 
+
+Timezone Weather was developed with a strong emphasis on accessibility and inclusiveness, ensuring that the software is designed for all users. The app is also responsive, making it suitable for use on mobile devices.
+
+## Using the App
+
+The app is live on the web and is available as an open-source project at: [https://vitoriopaulo.github.io/timezone-weather-app](https://vitoriopaulo.github.io/timezone-weather-app)
+
+You can also use the app locally by cloning the repository:
+
+```bash
+git clone https://github.com/vitoriopaulo/timezone-weather-app.git
+
+Then, open the index.html file in your web browser.
+Contributing
+Contributions to this open-source app are welcome! Feel free to fork the repository, make your changes, and submit a pull request.
+Getting in Touch
+The best way to get in touch is by opening an issue on GitHub.
+License
+This app is licensed under the MIT License.
+Acknowledgments
+I dedicate this application to everyone who believes it might be useful to them. I hope anyone using it enjoys it as much as I did!
